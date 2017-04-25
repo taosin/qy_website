@@ -6,12 +6,7 @@
 			</div>
 			<div class="content">
 				<ul>
-					<li>网站首页</li>
-					<li>关于我们</li>
-					<li>新闻动态</li>
-					<li>成功案例</li>
-					<li>产品展示</li>
-					<li>联系我们</li>
+					<li v-for="(menu, index) in menus" @click="current=index"><router-link :to="menu.url" :class="current === index ? 'current-li':''">{{menu.text}}</router-link></li>
 				</ul>
 			</div>
 			<div class="language">
@@ -28,6 +23,15 @@
 		name: 'hello',
 		data () {
 			return {
+				menus:[
+				{ text:'网站首页', url:'/index' },
+				{ text:'关于我们', url:'/hello' },
+				{ text:'新闻动态', url:'/index' },
+				{ text:'成功案例', url:'/index' },
+				{ text:'产品展示', url:'/index' },
+				{ text:'联系我们', url:'/index' },
+				],
+				current:0
 			}
 		},
 		attached(){
@@ -62,17 +66,26 @@
 				// background: red;
 				float: left;
 				margin-left: 100px;
+				a{
+					color: #fff;
+					display: inline-block;
+					width: 100%;
+					height: 100%;
+				}
 				ul{
 					li{
 						float: left;
 						font-size: 16px;
 						padding: 15px 20px;
-						color: #fff;
 						cursor: pointer;
+						color: #fff;
 					}
 					li:hover{
 						font-weight: bold;
 						opacity: .8;
+					}
+					.current-li{
+						color: #39f;
 					}
 				}
 			}
@@ -82,7 +95,6 @@
 				padding: 15px;
 				ul{
 					color: #fff;
-					font-size: 10px !important;
 					li{
 						float: left;
 						background: #5a8143;

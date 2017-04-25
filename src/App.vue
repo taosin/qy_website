@@ -23,5 +23,8 @@ import top from './components/header.vue';
     text-align: center;
     /*color: #2c3e50;*/
     text-align: center;
+    background: #dedede;
+    width: 100%;
+    height: 100%;
   }
 </style>
