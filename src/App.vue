@@ -2,15 +2,18 @@
   <div id="app">
     <top></top> 
     <router-view></router-view>
+    <foot></foot>
   </div>
 </template>
 
 <script>
 import top from './components/header.vue';
+import foot from './components/footer.vue';
   export default {
     name: 'app',
     components:{
-      top
+      top,
+      foot
     },
   }
 </script>
