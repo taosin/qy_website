@@ -29,7 +29,7 @@
 				{ text:'新闻动态', url:'/index' },
 				{ text:'成功案例', url:'/index' },
 				{ text:'产品展示', url:'/index' },
-				{ text:'联系我们', url:'/index' },
+				{ text:'联系我们', url:'/contact' },
 				],
 				current:0
 			}
